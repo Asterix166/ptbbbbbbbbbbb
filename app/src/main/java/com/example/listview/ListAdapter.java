@@ -31,11 +31,15 @@ public class ListAdapter extends ArrayAdapter<ListData> {
         TextView listName = view.findViewById(R.id.listName);
         TextView listTime = view.findViewById(R.id.listTime);
         TextView listpeng = view.findViewById(R.id.listpeng);
+        TextView listkategori = view.findViewById(R.id.listkategori);
+        TextView listbayar = view.findViewById(R.id.listbayar);
 
         listImage.setImageResource(listData.image);
         listName.setText(listData.name);
         listTime.setText(listData.time);
         listpeng.setText(listData.peng);
+        listkategori.setText(listData.kategori);
+        listbayar.setText(listData.uang);
 
         return view;
     }
