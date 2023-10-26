@@ -12,9 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginLeft="167dp"
+        android:layout_marginLeft="151dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="166dp"
+        android:layout_marginEnd="164dp"
         android:fontFamily="@font/poppins"
         android:gravity="top"
         android:lineSpacingExtra="-10sp"
@@ -24,32 +24,92 @@
         tools:layout_editor_absoluteX="173dp" />
 
     <TextView
+        android:id="@+id/bulan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="163dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="182dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:gravity="top"
+        android:lineSpacingExtra="-10sp"
+        android:text="@string/bulan"
+        android:textAppearance="@style/bulan"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="173dp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/search"
+        android:layout_width="30dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/search" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/bookmark"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bookmark" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/setting"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/setting" />
+
+    <TextView
         android:id="@+id/daily"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="95dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="40dp"
-        android:fontFamily="@font/poppinslight"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="63dp"
+        android:fontFamily="@font/poppinsmedium"
         android:gravity="top"
         android:lineSpacingExtra="-10sp"
         android:text="@string/daily"
-        android:textAppearance="@style/daily"
-        app:layout_constraintTop_toBottomOf="@+id/transaction"
-        tools:layout_editor_absoluteX="44dp" />
+        android:textAppearance="@style/daily" />
 
     <ListView
         android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="15dp"
         android:divider="@android:color/transparent"
         android:dividerHeight="10.0sp"
         android:scrollbars="vertical"
         app:layout_constraintTop_toBottomOf="@+id/daily"
         tools:layout_editor_absoluteX="0dp"
-        tools:listitem="@layout/list_item" />
+        tools:listitem="@layout/list_item"
+        android:layout_below="@id/daily"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/kiri"
+        android:layout_width="19dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/kiri" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/kanan"
+        android:layout_width="19dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="60dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/kanan" />
 
 
 </RelativeLayout>

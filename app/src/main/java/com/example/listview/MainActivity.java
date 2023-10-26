@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        int[] imageList = {R.drawable.pencil, R.drawable.pencil, R.drawable.pencil, R.drawable.pencil, R.drawable.pencil, R.drawable.pencil, R.drawable.pencil};
+        int[] imageList = {R.drawable.food, R.drawable.money, R.drawable.food, R.drawable.money, R.drawable.money, R.drawable.money, R.drawable.money};
         int[] ingredientList = {R.string.pastaIngredients, R.string.maggiIngredients,R.string.cakeIngredients,R.string.pancakeIngredients,R.string.pizzaIngredients, R.string.burgerIngredients, R.string.friesIngredients};
         int[] descList = {R.string.pastaDesc, R.string.maggieDesc, R.string.cakeDesc,R.string.pancakeDesc,R.string.pizzaDesc, R.string.burgerDesc, R.string.friesDesc};
         String[] nameList = {"22", "21", "20", "19", "18","17", "18"};
