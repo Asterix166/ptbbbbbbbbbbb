@@ -40,7 +40,7 @@
 
 
         <TextView
-            android:id="@+id/listTime"
+            android:id="@+id/listpem"
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:layout_marginStart="110dp"
@@ -59,7 +59,7 @@
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_toEndOf="@id/listTime"
+            android:layout_toEndOf="@id/listpem"
             android:text="pengeluaran"
             android:textColor="#FA6900"
             android:textSize="14sp"

@@ -25,15 +25,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         int[] imageList = {R.drawable.food, R.drawable.money, R.drawable.food, R.drawable.money, R.drawable.money, R.drawable.money, R.drawable.money};
-        int[] ingredientList = {R.string.pastaIngredients, R.string.maggiIngredients,R.string.cakeIngredients,R.string.pancakeIngredients,R.string.pizzaIngredients, R.string.burgerIngredients, R.string.friesIngredients};
-        int[] descList = {R.string.pastaDesc, R.string.maggieDesc, R.string.cakeDesc,R.string.pancakeDesc,R.string.pizzaDesc, R.string.burgerDesc, R.string.friesDesc};
         String[] nameList = {"22", "21", "20", "19", "18","17", "18"};
-        String[] timeList = {"Rp 0,00", "Rp 700.000,00", "Rp 0,00","Rp 0,00", "Rp 0,00", "Rp 0,00", "Rp 0,00"};
+        String[] pemList = {"Rp 0,00", "Rp 700.000,00", "Rp 0,00","Rp 0,00", "Rp 0,00", "Rp 0,00", "Rp 0,00"};
         String[] pengList = {"Rp 800.000,00", "Rp 0,00", "Rp 500.000,00","Rp 0,00", "Rp 0,00", "Rp 0,00", "Rp 0,00"};
         String[] katList = {"Makan", "Gaji", "Makan","Gaji", "Rp 0,00", "Rp 0,00", "Rp 0,00"};
         String[] uangList = {"Tunai", "Bank", "Bank","Rp 0,00", "Rp 0,00", "Rp 0,00", "Rp 0,00"};
         for (int i = 0; i < imageList.length; i++){
-            listData = new ListData(nameList[i], timeList[i], pengList[i], katList[i], uangList[i], ingredientList[i], descList[i], imageList[i]);
+            listData = new ListData(nameList[i], pemList[i], pengList[i], katList[i], uangList[i],  imageList[i]);
             dataArrayList.add(listData);
         }
         listAdapter = new ListAdapter(MainActivity.this, dataArrayList);
@@ -44,13 +42,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(MainActivity.this, DetailedActivity.class);
-                intent.putExtra("name", nameList[i]);
-                intent.putExtra("time", timeList[i]);
-                intent.putExtra("time", pengList[i]);
-                intent.putExtra("time", katList[i]);
-                intent.putExtra("time", uangList[i]);
-                intent.putExtra("ingredients", ingredientList[i]);
-                intent.putExtra("desc", descList[i]);
+                intent.putExtra("tanggal", nameList[i]);
+                intent.putExtra("pemasukan", pemList[i]);
+                intent.putExtra("pengeluaran", pengList[i]);
+                intent.putExtra("kategori", katList[i]);
+                intent.putExtra("uang", uangList[i]);
                 intent.putExtra("image", imageList[i]);
                 startActivity(intent);
             }
